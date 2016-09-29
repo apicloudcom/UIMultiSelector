@@ -24,7 +24,7 @@ Description: UIMultiSelector
 
 UIMultiSelector 封装了一个支持多选的选择器，开发者可自定义该选择器的样式及其数据源。当您的 APP 需要为用户同时提供多种可选项的支持时可以选择该控件快速配置使用节省开发时间。**该模块是 multiSelector 模块的优化版本**
 
-![图片说明](/img/docImage/multiSelector.jpg)
+![图片说明](http://docs.apicloud.com/img/docImage/multiSelector.jpg)
 
 
 ## [实例widget下载地址](https://github.com/XM-Right/UIMultiSelector-Example/archive/master.zip)
