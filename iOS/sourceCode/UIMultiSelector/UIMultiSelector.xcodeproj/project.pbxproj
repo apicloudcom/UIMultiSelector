@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B570DA081C897D5E007F99AA /* UIMSPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570DA031C897D5E007F99AA /* UIMSPickerView.m */; };
+		B570DA091C897D5E007F99AA /* UIMSPickerViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B570DA051C897D5E007F99AA /* UIMSPickerViewCell.m */; };
+		B570DA0A1C897D5E007F99AA /* UIMultiSelectorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B570DA071C897D5E007F99AA /* UIMultiSelectorPickerView.m */; };
+		B5ECBCCD1C7FF65400BEBAFF /* UIMultiSelector.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B5ECBCCC1C7FF65400BEBAFF /* UIMultiSelector.h */; };
+		B5ECBCCF1C7FF65400BEBAFF /* UIMultiSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = B5ECBCCE1C7FF65400BEBAFF /* UIMultiSelector.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5ECBCC71C7FF65400BEBAFF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B5ECBCCD1C7FF65400BEBAFF /* UIMultiSelector.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B570DA021C897D5E007F99AA /* UIMSPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMSPickerView.h; sourceTree = "<group>"; };
+		B570DA031C897D5E007F99AA /* UIMSPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMSPickerView.m; sourceTree = "<group>"; };
+		B570DA041C897D5E007F99AA /* UIMSPickerViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMSPickerViewCell.h; sourceTree = "<group>"; };
+		B570DA051C897D5E007F99AA /* UIMSPickerViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMSPickerViewCell.m; sourceTree = "<group>"; };
+		B570DA061C897D5E007F99AA /* UIMultiSelectorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMultiSelectorPickerView.h; sourceTree = "<group>"; };
+		B570DA071C897D5E007F99AA /* UIMultiSelectorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMultiSelectorPickerView.m; sourceTree = "<group>"; };
+		B5ECBCC91C7FF65400BEBAFF /* libUIMultiSelector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUIMultiSelector.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5ECBCCC1C7FF65400BEBAFF /* UIMultiSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIMultiSelector.h; sourceTree = "<group>"; };
+		B5ECBCCE1C7FF65400BEBAFF /* UIMultiSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIMultiSelector.m; sourceTree = "<group>"; };
+		B5ECBCD61C7FF67200BEBAFF /* NSDictionaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryUtils.h; sourceTree = "<group>"; };
+		B5ECBCD81C7FF67200BEBAFF /* UZAppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppUtils.h; sourceTree = "<group>"; };
+		B5ECBCD91C7FF67200BEBAFF /* UZModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZModule.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5ECBCC61C7FF65400BEBAFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B5ECBCC01C7FF65400BEBAFF = {
+			isa = PBXGroup;
+			children = (
+				B5ECBCCB1C7FF65400BEBAFF /* UIMultiSelector */,
+				B5ECBCCA1C7FF65400BEBAFF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B5ECBCCA1C7FF65400BEBAFF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5ECBCC91C7FF65400BEBAFF /* libUIMultiSelector.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5ECBCCB1C7FF65400BEBAFF /* UIMultiSelector */ = {
+			isa = PBXGroup;
+			children = (
+				B5ECBCD51C7FF67200BEBAFF /* headFile */,
+				B5ECBCCC1C7FF65400BEBAFF /* UIMultiSelector.h */,
+				B5ECBCCE1C7FF65400BEBAFF /* UIMultiSelector.m */,
+				B570DA061C897D5E007F99AA /* UIMultiSelectorPickerView.h */,
+				B570DA071C897D5E007F99AA /* UIMultiSelectorPickerView.m */,
+				B570DA021C897D5E007F99AA /* UIMSPickerView.h */,
+				B570DA031C897D5E007F99AA /* UIMSPickerView.m */,
+				B570DA041C897D5E007F99AA /* UIMSPickerViewCell.h */,
+				B570DA051C897D5E007F99AA /* UIMSPickerViewCell.m */,
+			);
+			path = UIMultiSelector;
+			sourceTree = "<group>";
+		};
+		B5ECBCD51C7FF67200BEBAFF /* headFile */ = {
+			isa = PBXGroup;
+			children = (
+				B5ECBCD61C7FF67200BEBAFF /* NSDictionaryUtils.h */,
+				B5ECBCD81C7FF67200BEBAFF /* UZAppUtils.h */,
+				B5ECBCD91C7FF67200BEBAFF /* UZModule.h */,
+			);
+			path = headFile;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5ECBCC81C7FF65400BEBAFF /* UIMultiSelector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5ECBCD21C7FF65400BEBAFF /* Build configuration list for PBXNativeTarget "UIMultiSelector" */;
+			buildPhases = (
+				B5ECBCC51C7FF65400BEBAFF /* Sources */,
+				B5ECBCC61C7FF65400BEBAFF /* Frameworks */,
+				B5ECBCC71C7FF65400BEBAFF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIMultiSelector;
+			productName = UIMultiSelector;
+			productReference = B5ECBCC91C7FF65400BEBAFF /* libUIMultiSelector.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5ECBCC11C7FF65400BEBAFF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = apicloud;
+				TargetAttributes = {
+					B5ECBCC81C7FF65400BEBAFF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = B5ECBCC41C7FF65400BEBAFF /* Build configuration list for PBXProject "UIMultiSelector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B5ECBCC01C7FF65400BEBAFF;
+			productRefGroup = B5ECBCCA1C7FF65400BEBAFF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5ECBCC81C7FF65400BEBAFF /* UIMultiSelector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5ECBCC51C7FF65400BEBAFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B570DA081C897D5E007F99AA /* UIMSPickerView.m in Sources */,
+				B570DA0A1C897D5E007F99AA /* UIMultiSelectorPickerView.m in Sources */,
+				B570DA091C897D5E007F99AA /* UIMSPickerViewCell.m in Sources */,
+				B5ECBCCF1C7FF65400BEBAFF /* UIMultiSelector.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B5ECBCD01C7FF65400BEBAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5ECBCD11C7FF65400BEBAFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5ECBCD31C7FF65400BEBAFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B5ECBCD41C7FF65400BEBAFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5ECBCC41C7FF65400BEBAFF /* Build configuration list for PBXProject "UIMultiSelector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5ECBCD01C7FF65400BEBAFF /* Debug */,
+				B5ECBCD11C7FF65400BEBAFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5ECBCD21C7FF65400BEBAFF /* Build configuration list for PBXNativeTarget "UIMultiSelector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5ECBCD31C7FF65400BEBAFF /* Debug */,
+				B5ECBCD41C7FF65400BEBAFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B5ECBCC11C7FF65400BEBAFF /* Project object */;
+}

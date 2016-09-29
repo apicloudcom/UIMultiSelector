@@ -1,0 +1,8 @@
+{
+	modules:[
+		{
+		    name:'UIMultiSelector',
+		    class:'com.apicloud.devlop.uzUIMultiSelector.UzUIMultiSelector'
+		}
+	]
+}
