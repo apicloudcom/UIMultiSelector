@@ -191,7 +191,7 @@
     UIMSPickerViewCell *currCell = [tableView cellForRowAtIndexPath:indexPath];
     if (self.singleSelector) {
         if (isLastForever) {
-            return nil;
+            return indexPath;
         } else if (currCell.isDisable) {
             [self tableView:tableView didUnhighlightRowAtIndexPath:indexPath];
             return nil;
