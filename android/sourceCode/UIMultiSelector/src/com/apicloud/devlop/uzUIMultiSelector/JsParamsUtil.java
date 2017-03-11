@@ -166,8 +166,9 @@ public class JsParamsUtil {
 	}
 
 	public int leftButtonBgColor(String leftButton) {
-		if (leftButton != null)
+		if (leftButton != null&&!leftButton.isEmpty()){
 			return UZUtility.parseCssColor(leftButton);
+		}
 		return UZUtility.parseCssColor("#f00");
 	}
 
@@ -231,7 +232,7 @@ public class JsParamsUtil {
 	}
 
 	public int rightButtonBgColor(String rightButton) {
-		if (rightButton != null)
+		if (rightButton != null&&!rightButton.isEmpty())
 			return UZUtility.parseCssColor(rightButton);
 		return UZUtility.parseCssColor("#0f0");
 	}
@@ -498,6 +499,10 @@ public class JsParamsUtil {
 
 	public boolean animation(UZModuleContext moduleContext) {
 		return moduleContext.optBoolean("animation", true);
+	}
+	
+	public boolean maskClose(UZModuleContext moduleContext) {
+		return moduleContext.optBoolean("maskClose", true);
 	}
 
 	public List<Item> items(UZModuleContext moduleContext) {

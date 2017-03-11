@@ -17,6 +17,7 @@
     BOOL animation;
     UIView *_maskView;    //遮罩层
 }
+@property(assign,nonatomic)BOOL *maskClose;
 @end
 
 @implementation UIMultiSelector
@@ -64,6 +65,7 @@
     coordy = screenHeight - frameH;
     NSDictionary *styleInfo = [paramsDict_ dictValueForKey:@"styles" defaultValue:@{}];
     //maskColor、maskView
+    self.maskClose = [paramsDict_ boolValueForKey:@"maskClose" defaultValue:YES];
     NSString *maskColor = [styleInfo stringValueForKey:@"mask" defaultValue:@"rgba(0,0,0,0)"];
     if ([maskColor isKindOfClass:[NSString class]] && maskColor.length <= 0) {
         maskColor = @"rgba(0,0,0,0)";
@@ -202,7 +204,17 @@
 }
 
 - (void)clickMaskViewClose:(UIGestureRecognizer *)tapGR {
-    [self close:nil];
+    
+    if (self.maskClose) {
+        
+        [self close:nil];
+        
+    }
+        NSMutableDictionary * sendDict = [NSMutableDictionary dictionaryWithCapacity:2];
+        [sendDict setObject:@"clickMask" forKey:@"eventType"];
+        [self sendResultEventWithCallbackId: openCbId dataDict:sendDict errDict:nil doDelete:NO];
+    
+   
 }
 
 - (void)returnMaxSelectedItem:(NSDictionary *)overflowTip {

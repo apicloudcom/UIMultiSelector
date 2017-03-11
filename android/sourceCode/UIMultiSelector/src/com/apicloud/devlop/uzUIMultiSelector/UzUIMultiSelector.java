@@ -197,10 +197,21 @@ public class UzUIMultiSelector extends UZModule {
 
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
-				if (mJsParamsUtil.animation(mModuleContext)) {
-					hideWithAnim(true);
-				} else {
-					clean();
+				int action = event.getAction();
+				switch (action) {
+				case MotionEvent.ACTION_DOWN:
+					if (mJsParamsUtil.maskClose(mModuleContext)) {
+						if (mJsParamsUtil.animation(mModuleContext)) {
+							hideWithAnim(true);
+						} else {
+							clean();
+						}
+					}
+					break;
+				case MotionEvent.ACTION_CANCEL:
+				case MotionEvent.ACTION_UP:
+					callBack("clickMask");
+					break;
 				}
 				return true;
 			}
@@ -321,8 +332,8 @@ public class UzUIMultiSelector extends UZModule {
 			leftBtn.setBackgroundDrawable(new BitmapDrawable(mJsParamsUtil
 					.leftButtonBitmap(leftBtnBg, this)));
 		} else {
-			leftBtn.setBackgroundColor(mJsParamsUtil
-					.leftButtonBgColor(leftBtnBg));
+			int color = mJsParamsUtil.leftButtonBgColor(leftBtnBg);
+			leftBtn.setBackgroundColor(color);
 		}
 	}
 
@@ -927,4 +938,5 @@ public class UzUIMultiSelector extends UZModule {
 		}
 		return false;
 	}
+
 }
