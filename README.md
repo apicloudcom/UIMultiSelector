@@ -1,35 +1,27 @@
-#**概述**
+# **概述**
 
 支持多选、单选的择器模块（内含iOS和android）
 
 APICloud 的 UIMultiSelector 模块是一个从屏幕底部弹出的选择器模块。由于本模块 UI 布局界面为固定模式，不能满足日益增长的广大开发者对侧滑列表模块样式的需求。因此，广大原生模块开发者，可以参考此模块的开发方式、接口定义等开发规范，或者基于此模块开发出更多符合产品设计的新 UI 布局的模块，希望此模块能起到抛砖引玉的作用。
 
-#**模块接口文档**
+# **模块接口文档**
 
-
-/*
-Title: UIMultiSelector
-Description: UIMultiSelector
-*/
-
-<p style="color: #ccc; margin-bottom: 30px;">来自于：官方</p>
+<p style="color: #ccc; margin-bottom: 30px;">来自于：APICloud 官方</p>
 
 <ul id="tab" class="clearfix">
 	<li class="active"><a href="#method-content">Method</a></li>
 </ul>
-<div id="method-content">
 
 <div class="outline">
-[open](#1)
 
-[show](#2)
+[open](#open)
+[show](#show)
+[hide](#hide)
+[close](#close)
 
-[hide](#3)
-
-[close](#4)
 </div>
 
-#**概述**
+## **模块概述**
 
 UIMultiSelector 封装了一个支持多选的选择器，开发者可自定义该选择器的样式及其数据源。当您的 APP 需要为用户同时提供多种可选项的支持时可以选择该控件快速配置使用节省开发时间。**该模块是 multiSelector 模块的优化版本**
 
@@ -39,14 +31,15 @@ UIMultiSelector 封装了一个支持多选的选择器，开发者可自定义�
 ## [实例widget下载地址](https://github.com/XM-Right/UIMultiSelector-Example/archive/master.zip)
 
 
+<div id="open"></div>
 
-#**open**<div id="1"></div>
+# **open**
 
 打开选择器
 
-open({params}, callback(ret, err))
+open({params}, callback(ret))
 
-##params
+## params
 
 rect：
 
@@ -149,8 +142,15 @@ styles：
 
 animation：
 
-- 类型：布尔类型
+- 类型：布尔
 - 描述：（可选项）打开关闭时是否显示滑入滑出动画
+- 默认：true
+
+
+maskClose：
+
+- 类型：布尔
+- 描述：（可选项）用户点击遮罩层（选择器以外的区域）时，是否关闭选择器
 - 默认：true
 
 items：
@@ -170,7 +170,7 @@ items：
 }]
 ```
 
-##callback(ret, err)
+## callback(ret)
 
 ret：
 
@@ -185,11 +185,12 @@ ret：
                                        // clickLeft：点击左上按钮
                                        // overflow：用户选择项大于 open 时设置的 max 值
                                        // clickItem：用户点击了列表选项事件
+                                       // clickMask：用户点击了选择器区域以外的遮罩层事件
     items:                             //数组类型；返回当前用户所选择的数据项数据，内容格式同传入的 items （支持自定义字段），当 eventType 为 overflow 时本参数无效
 }
 ```
 
-##示例代码
+## 示例代码
 
 ```js
  var UIMultiSelector = api.require('UIMultiSelector');
@@ -285,64 +286,71 @@ ret：
  });
 ```
 
-##可用性
+## 可用性
 
 iOS系统，Android系统
 
 可提供的1.0.0及更高版本
 
-#**close**<div id="4"></div>
+<div id="close"></div>
+
+# **close**
 
 关闭选择器（从内存清除）
 
 close()
 
-##示例代码
+## 示例代码
 
 ```js
 var multiSelector = api.require('UIMultiSelector');
 UIMultiSelector.close();
 ```
 
-##可用性
+## 可用性
 
 iOS系统，Android系统
 
 可提供的1.0.0及更高版本
 
-#**show**<div id="2"></div>
+<div id="show"></div>
+
+# **show**
 
 显示已隐藏的选择器
 
 show()
 
-##示例代码
+## 示例代码
 
 ```js
 var UIMultiSelector = api.require('UIMultiSelector');
 UIMultiSelector.show();
 ```
 
-##可用性
+## 可用性
 
 iOS系统，Android系统
 
 可提供的1.0.0及更高版本
 
-#**hide**<div id="3"></div>
+
+<div id="hide"></div>
+
+# **hide**
 
 隐藏选择器（并未从内存清除）
 
 hide()
 
-##示例代码
+## 示例代码
 
 ```js
 var UIMultiSelector = api.require('UIMultiSelector');
 UIMultiSelector.hide();
 ```
 
-##可用性
+## 可用性
 
 iOS系统，Android系统
 
