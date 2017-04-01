@@ -14,10 +14,10 @@ APICloud 的 UIMultiSelector 模块是一个从屏幕底部弹出的选择器模
 
 <div class="outline">
 
-[open](#open)
-[show](#show)
-[hide](#hide)
-[close](#close)
+- [open](#open)
+- [show](#show)
+- [hide](#hide)
+- [close](#close)
 
 </div>
 
