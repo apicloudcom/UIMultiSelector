@@ -1,6 +1,6 @@
 /**
   * APICloud Modules
-  * Copyright (c) 2014-2015 by APICloud, Inc. All Rights Reserved.
+  * Copyright (c) 2014-2017 by APICloud, Inc. All Rights Reserved.
   * Licensed under the terms of the The MIT License (MIT).
   * Please see the license.html included with this distribution for details.
   */
@@ -9,7 +9,7 @@
 #import "UIMultiSelector.h"
 #import "NSDictionaryUtils.h"
 #import "UZAppUtils.h"
-
+#define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 @interface UIMultiSelector ()<UIGestureRecognizerDelegate>
 {
     NSInteger openCbId;
@@ -17,7 +17,7 @@
     BOOL animation;
     UIView *_maskView;    //遮罩层
 }
-@property(assign,nonatomic)BOOL *maskClose;
+@property(assign,nonatomic)BOOL maskClose;
 @end
 
 @implementation UIMultiSelector
@@ -62,10 +62,16 @@
     float screenWidth = [UIScreen mainScreen].bounds.size.width;
     NSDictionary *rectInfo = [paramsDict_ dictValueForKey:@"rect" defaultValue:@{}];
     CGFloat frameH = [rectInfo floatValueForKey:@"h" defaultValue:244.0];
-    coordy = screenHeight - frameH;
+    if (iPhoneX) {
+        coordy = screenHeight - frameH-34;
+
+    }else{
+        coordy = screenHeight - frameH;
+
+    }
     NSDictionary *styleInfo = [paramsDict_ dictValueForKey:@"styles" defaultValue:@{}];
     //maskColor、maskView
-    self.maskClose = [paramsDict_ boolValueForKey:@"maskClose" defaultValue:YES];
+    self.maskClose = [paramsDict_ boolValueForKey:@"maskClose" defaultValue:true];
     NSString *maskColor = [styleInfo stringValueForKey:@"mask" defaultValue:@"rgba(0,0,0,0)"];
     if ([maskColor isKindOfClass:[NSString class]] && maskColor.length <= 0) {
         maskColor = @"rgba(0,0,0,0)";

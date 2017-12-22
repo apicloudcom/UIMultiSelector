@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:textAllCaps="false"
+			android:textAllCaps="false"
             android:text="取消" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:textAllCaps="false"
+			android:textAllCaps="false"
             android:text="完成" />
     </RelativeLayout>
 
